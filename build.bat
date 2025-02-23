@@ -16,4 +16,4 @@ set CC=%NDK_PATH%\toolchains\llvm\prebuilt\windows-x86_64\bin\aarch64-linux-andr
 
 :: 编译 Go 项目
 echo Building for Android...
-go build -o injector-go main.go
+go build -ldflags="-s -w" -o injector-go main.go
